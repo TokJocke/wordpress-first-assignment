@@ -47,7 +47,8 @@
 
 		<nav id="nav">
 		<?= wp_nav_menu([
-			"container_class" => "container"
+			"container_class" => "container",
+			'theme_location' => 'nav-menu'
 			//Hur noga med samma nesting? 
 			//orginal = #nav > .container > .row > .col-xs-12 > .menu > li 
 			//min WP ? #nav > .container > .menu > li  
