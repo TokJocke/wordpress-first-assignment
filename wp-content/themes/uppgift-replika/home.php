@@ -20,7 +20,7 @@
 								<i class="fa fa-calendar"></i> <?= get_the_date();?>
 							</li>
 							<li>
-								<i class="fa fa-user"></i> <a href="#"><?php the_author();?></a>
+								<i class="fa fa-user"></i> <?php the_author_posts_link();?>
 							</li>
 							<li>
 								<i class="fa fa-tag"></i> <?php print_categories(); ?>
@@ -49,8 +49,9 @@
 						
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
-							
-								<?php dynamic_sidebar("sidebar");?>
+								<ul>
+									<?php dynamic_sidebar("sidebar");?>
+								</ul>
 							</div>
 								
 								

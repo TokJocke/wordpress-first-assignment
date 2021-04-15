@@ -1,5 +1,8 @@
 <?php 
 
+// CSS FÖR Pageination och footer social meny
+
+
 //function for loading all styles
 function load_styles() {
     wp_enqueue_style( 'baaaaaaa', get_template_directory_uri() . './css/bootstrap.css', false );
@@ -36,8 +39,8 @@ register_sidebar([  //Creates 4 uls 1 for each widget picked. Orginal was 2 ul w
     "name" => "sidebar",
     "id" => "sidebar",
     //'before_widget' => false,
-    'before_widget' => '<ul><li>',
-    'after_widget' => '</li></ul>',
+/*     'before_widget' => '<ul><li>',
+    'after_widget' => '</li></ul>', */
 ]);
 
 
@@ -69,6 +72,8 @@ function print_categories() {
  */
 
 
+//Filter text thats not wanted in author.php -> title
+add_filter('get_the_archive_title_prefix','__return_false');
 
 
 
@@ -79,6 +84,7 @@ add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('widgets');
+add_theme_support( 'title-tag' );
 
 
 /**
