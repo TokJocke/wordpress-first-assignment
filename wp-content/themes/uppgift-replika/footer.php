@@ -5,9 +5,11 @@
     <div class="container">
         <div class="row top">
             <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- Sidebar "kort-om-oss som är redigerbar i adminpanelen -->
                 <?php dynamic_sidebar("kort-om-oss");?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+                <!-- Sidebar "kontaktuppgifter som är redigerbar i adminpanelen -->
                 <?php dynamic_sidebar("kontaktuppgifter");?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
@@ -53,8 +55,6 @@
 
 </div>
 
-<!--  	<script src="js/script.js"></script>
- -->
 <?php wp_footer(); ?>
 </body>
 </html>

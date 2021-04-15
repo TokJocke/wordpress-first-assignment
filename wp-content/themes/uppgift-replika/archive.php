@@ -3,12 +3,13 @@
 <div class="container">
 	<div class="row">
 		<div id="primary" class="col-xs-12 col-md-9">
-			<h1><?= the_archive_title();   //the_author_posts_link();?></h1>
+			<!-- Hämtar titeln -->
+			<h1><?= the_archive_title();?></h1>
 			<?php //Startar loop 
 					while(have_posts()) {
 					the_post(); 
 			?>
-				<article>
+				<article> <!-- Check home.php for comments on each function -->
 					<img src="<?= get_the_post_thumbnail_url()?>"/>
 					<h2 class="title">
 						<a href="<?php the_permalink();?>"><?php the_title();?></a>
@@ -30,7 +31,10 @@
 
 			<?php //Stänger loop 
 					};
-					the_posts_pagination();  
+					the_posts_pagination([
+						'screen_reader_text' => "Inläggsnavigering",
+						"class" => "pagination"
+					]); 
 					
 			?>
 		</div>

@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+	<!-- Hämtar Webbplatsrubrik -->
 	<title><?=get_bloginfo("name");?></title>
-
+	<!-- Skapar krok -->
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -14,10 +15,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<!-- <a class="logo" href="index.html">Labb 1</a> -->
+						<!-- Hämtar Webbplatsrubrik & url -->
 						<a class="logo" href="<?=get_bloginfo("url");?>"> <?=get_bloginfo("name");?> </a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
+					<!-- Skapar en sökruta -->
 					<?php get_search_form()?>
 					</div>
 					<div class="col-xs-4 text-right visible-xs">
@@ -41,10 +43,10 @@
 		</div>
 
 		<nav id="nav">
+		<!-- Hämtar nav meny för headern som skapas i adminpanelen -->
 		<?= wp_nav_menu([
 			"container_class" => "container",
 			'theme_location' => 'nav-menu'
-			//Hur noga med samma nesting? 
 			//orginal = #nav > .container > .row > .col-xs-12 > .menu > li 
 			//min WP ? #nav > .container > .menu > li  
 		]); ?>
