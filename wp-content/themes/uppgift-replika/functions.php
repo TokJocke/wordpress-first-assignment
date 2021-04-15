@@ -17,7 +17,7 @@ function register_my_menus() {
     
 //Register sidebars
 register_sidebar([ //Long time google, still no solution for the div wrapper it ads. 
-    "name" => "kort-om-oss",
+    "name" => "kort om oss",
     "id" => "kort-om-oss",
     "before_title" => "<h4>",
     "after_title" => "</h4>",
@@ -35,7 +35,7 @@ register_sidebar([
 register_sidebar([  //Creates 4 uls 1 for each widget picked. Orginal was 2 ul with 1 widget in first and 3 widgets in second
     "name" => "sidebar",
     "id" => "sidebar",
-    'before_widget' => false,
+    //'before_widget' => false,
     'before_widget' => '<ul><li>',
     'after_widget' => '</li></ul>',
 ]);
