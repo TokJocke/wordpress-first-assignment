@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Labb 1</title>
+	<title><?=get_bloginfo("name");?></title>
 
 	<?php wp_head(); ?>
 </head>
@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
 						<!-- <a class="logo" href="index.html">Labb 1</a> -->
-						<?php wp_title();?>
+						<a class="logo" href="<?=get_bloginfo("url");?>"> <?=get_bloginfo("name");?> </a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 					<?php get_search_form()?>

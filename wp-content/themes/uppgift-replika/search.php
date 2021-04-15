@@ -24,7 +24,7 @@
 							<i class="fa fa-tag"></i> <?php print_categories(); ?>
 						</li>
 					</ul>
-					<?php the_excerpt(); //möjligtvis the content istället beroende på vad Ian vill ha?>
+					<?php the_excerpt();?>
 			
 				</article>
 
@@ -35,10 +35,13 @@
 			?>
 		</div>
 									
-		<aside id="secondary" class="col-xs-12 col-md-3">
-			<div id="sidebar">
-				<?php dynamic_sidebar("sidebar");?>
-			</div>
+        <aside id="secondary" class="col-xs-12 col-md-3">
+            <div id="sidebar">
+                <ul>
+                    <?php dynamic_sidebar("sidebar");?>
+                </ul>
+            </div>
+        </aside>
 				
 							
 						

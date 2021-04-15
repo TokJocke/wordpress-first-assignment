@@ -26,41 +26,37 @@
 								<i class="fa fa-tag"></i> <?php print_categories(); ?>
 							</li>
 						</ul>
-						<?php the_excerpt(); //möjligtvis the content istället beroende på vad Ian vill ha?>
+						<?php the_excerpt();?>
 				
 					</article>
 
 				<?php //Stänger loop 
 						};
-						the_posts_pagination();  
+						the_posts_pagination([
+							'screen_reader_text' => "Inläggsnavigering",
+							"class" => "pagination"
+						]);  
 						
 				?>
-<!-- 
-				<nav class="navigation pagination">
-					<h2 class="screen-reader-text">Inläggsnavigering</h2>
-					<a class="prev page-numbers" href="">Föregående</a>
-					<span class="page-numbers current">1</span>
-					<a class="page-numbers" href="">2</a>
-					<a class="next page-numbers" href="">Nästa</a>
-				</nav> -->
+
 			</div>
 						
 						
 						
-						<aside id="secondary" class="col-xs-12 col-md-3">
-							<div id="sidebar">
-								<ul>
-									<?php dynamic_sidebar("sidebar");?>
-								</ul>
-							</div>
-								
-								
-							
-							
-						</aside>
-					</div>
+			<aside id="secondary" class="col-xs-12 col-md-3">
+				<div id="sidebar">
+					<ul>
+						<?php dynamic_sidebar("sidebar");?>
+					</ul>
 				</div>
-			</section>
+					
+					
+				
+				
+			</aside>
+		</div>
+	</div>
+</section>
 
 
 <?php get_footer() ?>
