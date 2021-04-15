@@ -12,10 +12,8 @@ function load_styles() {
 }
 
 function register_my_menus() {
-    register_nav_menu("nav-menu", "Header nav-menu"); 
+    register_nav_menu("nav-menu", "Header nav menu"); 
     register_nav_menu("sub-menu", "Sub menu"); 
-    register_nav_menu("footer-menu", "footer menu");
-
 }
     
 //Register sidebars
@@ -43,8 +41,24 @@ register_sidebar([  //Creates 4 uls 1 for each widget picked. Orginal was 2 ul w
     'after_widget' => '</li></ul>', */
 ]);
 
-
-
+// Adding an option page to modify content in Footer
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page(array(
+        'page_title'    => 'Options Footer',
+        'menu_title'    => 'Temainstillinger',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Footer',
+        'menu_title'    => 'Footer',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+    
+}
 
 //Function for printing categories with links
 function print_categories() {
@@ -74,8 +88,6 @@ function print_categories() {
 
 //Filter text thats not wanted in author.php -> title
 add_filter('get_the_archive_title_prefix','__return_false');
-
-
 
 
 //add_action( 'wp_enqueue_scripts', 'load_scripts' );
