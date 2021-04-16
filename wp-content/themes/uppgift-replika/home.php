@@ -39,13 +39,14 @@
 
 				<?php //Stänger loop 
 						};
-						/* Skapar pagination för bloggen */
-						the_posts_pagination([
-							'screen_reader_text' => "Inläggsnavigering",
-							"class" => "pagination"
-						]);  
-						
 				?>
+				<nav class="pagination">
+					<!-- Calls my custom pagination -->
+					<?php pagination_bar(); 
+					?>
+				</nav>
+
+
 
 			</div>
 						

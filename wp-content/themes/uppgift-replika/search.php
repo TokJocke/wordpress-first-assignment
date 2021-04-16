@@ -30,13 +30,15 @@
 				</article>
 
 			<?php //Stänger loop 
-					};
-					the_posts_pagination([
-						'screen_reader_text' => "Inläggsnavigering",
-						"class" => "pagination"
-					]); 
-					
+				};
+				the_posts_pagination([
+					'screen_reader_text' => "Inläggsnavigering",
+					"class" => "pagination"
+				]); 			
 			?>
+			
+
+
 		</div>
 									
         <aside id="secondary" class="col-xs-12 col-md-3">
